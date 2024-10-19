@@ -12,6 +12,10 @@
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
     </script>
     <script src="https://kit.fontawesome.com/b22b38ff85.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css" type="text/css">
 </head>
 
 <body>
@@ -49,7 +53,7 @@
             <a href="/login"> Sign In / Sign Up </a>
         </div>
     </nav>
-    <article class="container mt-3">
+    <!-- <div class="container alert-container">
         <div class="row d-none d-sm-block">
             <div class="col-12">
                 <div class="alert alert-warning">
@@ -59,24 +63,29 @@
                 </div>
             </div>
         </div>
+        </div> -->
+        <div class="container-fluid callout-container">
         <!-- Callout! -->
         <div class="row">
             <div class="col-12">
                 <section class="callout jumbotron text-center">
-                    <h1>The finest whiskeys delivered to your doorstep.</h1>
+                    <h1 class="jumbotron-header">The finest whiskeys delivered to your doorstep.</h1>
                     <p class="lead">Sign up today to start receiving the world's best whiskeys every month.
                         <s class="d-none d-sm-inline">€19.99</s>
                         <span class="d-inline d-sm-none"><br></span>
                         <strong><mark>First one is free!</mark></strong></p>
-                        <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#signUpModal">Sign Up!</button>
-                    <p class="text-muted"><small>You must be over 18 to sign up to our service. Please drink responsibly.</small></p>
+                    <button type="button" class="btn btn-success btn-lg" data-toggle="modal"
+                        data-target="#signUpModal">Sign Up!</button>
+                    <p class="text-muted"><small>You must be over 18 to sign up to our service. Please drink
+                            responsibly.</small></p>
                 </section>
             </div>
         </div>
         <!-- /.Callout -->
-        <hr>
+    </div>
 
-        <!-- Quotes -->
+    <!-- Quotes -->
+    <div class="container quotes-container">
         <section class="quotes">
             <div class="row">
                 <div class="col-12 my-5">
@@ -114,9 +123,10 @@
             </div>
         </section>
         <!-- /.quotes -->
-        <hr>
+    </div>
 
-        <!-- Features -->
+    <!-- Features -->
+    <div class="features-container">
         <section class="features">
             <div class="row">
                 <div class="col-12 my-5">
@@ -164,73 +174,74 @@
             </div>
         </section>
         <!-- /.features -->
+    </div>
 
-        <hr>
-
-        <section class="callout">
-            <div class="col-12">
-                <h1> Monthly Favourites </h1>
-                <p class="lead"> Top 5 Whiskeys of the month! </p>
-                <table class="table">
-                    <tr>
-                        <th> Name </th>
-                        <th> Origin </th>
-                    </tr>
-                    <tr>
-                        <td> Glen Scotia </td>
-                        <td> Scotland </td>
-                    </tr>
-                    <tr>
-                        <td> Jack Daniel's </td>
-                        <td> Tennessee </td>
-                    </tr>
-                    <tr>
-                        <td> Crown Royal </td>
-                        <td> Canada </td>
-                    </tr>
-                    <tr>
-                        <td> Kilbeggan </td>
-                        <td> Westmeath, Republic of Ireland </td>
-                    </tr>
-                    <tr>
-                        <td> Hibiki </td>
-                        <td> Japan </td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-    </article>
+    <section class="callout">
+        <div class="col-12">
+            <h1> Monthly Favourites </h1>
+            <p class="lead"> Top 5 Whiskeys of the month! </p>
+            <table class="table">
+                <tr>
+                    <th> Name </th>
+                    <th> Origin </th>
+                </tr>
+                <tr>
+                    <td> Glen Scotia </td>
+                    <td> Scotland </td>
+                </tr>
+                <tr>
+                    <td> Jack Daniel's </td>
+                    <td> Tennessee </td>
+                </tr>
+                <tr>
+                    <td> Crown Royal </td>
+                    <td> Canada </td>
+                </tr>
+                <tr>
+                    <td> Kilbeggan </td>
+                    <td> Westmeath, Republic of Ireland </td>
+                </tr>
+                <tr>
+                    <td> Hibiki </td>
+                    <td> Japan </td>
+                </tr>
+            </table>
+        </div>
+    </section>
 
     <div class="modal fade" id="signUpModal" tabindex="-1">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title"> Sign Up to Whiskey Drop! </h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"> Sign Up to Whiskey Drop! </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email"
+                                aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="repeatPassword"> Repeat Password</label>
+                            <input type="password" class="form-control" id="repeatPassword"
+                                placeholder="Repeat Password">
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
             </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email" aria-describedby="emailHelp">
-                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                    </div>
-                    <div class="form-group">
-                      <label for="password">Password</label>
-                      <input type="password" class="form-control" id="password" placeholder="Password" >
-                    </div>
-                    <div class="form-group">
-                        <label for="repeatPassword"> Repeat Password</label>
-                        <input type="password" class="form-control" id="repeatPassword" placeholder="Repeat Password" >
-                      </div>
-                    <button type="submit" class="btn btn-success">Submit</button>
-                  </form>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
